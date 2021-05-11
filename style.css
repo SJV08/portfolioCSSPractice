@@ -1,0 +1,66 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.profile__head, .profile__info, .personal__info {
+    border: 1px solid red;
+}
+
+/*** VARIABLES ***/
+
+:root {
+    --main-bg-color: #F2F2F2;
+    --sect-bg-color: #fff;
+    --font-copy: 'Montserrat';
+    --head-font-color: #4F4F4F;
+    --subhead-font-color: #333333;
+    --body-font-color: #828282;
+    --btn-color: #2F80ED;
+
+  }
+
+/*** END VARIABLES ***/
+
+/*** FLEX LAYOUT ***/
+
+.profile__head, .profile__info, .personal__info {
+    display: flex;
+}
+
+.profile__info {
+    flex-direction: column;
+}
+
+.personal__info {
+    justify-content: space-between;
+}
+
+.profile-img { width: 25%; }
+.profile__info { width: 75%; }
+
+
+
+/*** END FLEX LAYOUT ***/
+
+
+.profile__head {
+    margin: 0 12.3125rem;
+    padding: 1.3125rem;
+}
+/*** COPY STYLES ***/
+body {
+    background-color: var(--main-bg-color);
+}
+
+
+
+
+/*** END COPY STYLES ***/
