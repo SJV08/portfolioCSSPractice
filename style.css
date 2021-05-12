@@ -10,10 +10,6 @@
     margin: auto;
 }
 
-.profile__head, .profile__info, .personal__info {
-    border: 1px solid red;
-}
-
 /*** VARIABLES ***/
 
 :root {
@@ -24,6 +20,8 @@
     --subhead-font-color: #333333;
     --body-font-color: #828282;
     --btn-color: #2F80ED;
+    --head-font-size: 1.5rem;
+    --subhead-font-size: 1.125rem;
 
   }
 
@@ -31,22 +29,33 @@
 
 /*** FLEX LAYOUT ***/
 
-.profile__head, .profile__info, .personal__info {
+.profile__head, .profile__info, .personal__info, .about__me, .contact__info, .profile__description {
     display: flex;
 }
 
-.profile__info {
+.profile__info, .about__me, .contact__info, .profile__description {
     flex-direction: column;
 }
 
-.personal__info {
+.personal__info, .about__me{
     justify-content: space-between;
 }
 
-.profile-img { width: 25%; }
-.profile__info { width: 75%; }
+.contact__info, .profile__description {
+    justify-content: space-evenly;
+}
 
+.profile__description {
+    flex-grow: 1;
+}
 
+.profile__info {
+    width: 75%;
+}
+
+.personal__info {
+    margin-bottom: 0.5rem;
+}
 
 /*** END FLEX LAYOUT ***/
 
@@ -55,11 +64,61 @@
     margin: 0 12.3125rem;
     padding: 1.3125rem;
 }
+
+.profile-img {
+    width: 25%;
+    max-width: 100%;
+    min-height: 200px;
+    border-radius: 16px;
+    margin-right: 1.3125rem;
+}
+
 /*** COPY STYLES ***/
 body {
     background-color: var(--main-bg-color);
 }
 
+.profile__head {
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.about__me h1 {
+    font-size: var(--head-font-size);
+    font-family: var(--font-copy);
+    color: var(--head-font-color);
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+.profile__info h3 {
+    font-size: var(--subhead-font-size);
+    font-family: var(--font-copy);
+    font-weight: 500;
+}
+
+.about__me h3 {
+    color: var(--body-font-color);
+}
+
+.contact__info > h3 {
+    color: var(--head-font-color);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px; /* Adjust according to image size to push text across. */
+}
+
+.contact__info h3:first-child{ background-image: url('img/email.png'); }
+.contact__info h3:last-child{ background-image: url('img/phone.png'); }
+
+
+
+.profile__description > p {
+    font-family: var(--font-copy);
+    font-size: var(--subhead-font-size);
+    color: var(--body-font-color);
+    font-weight: 500;
+}
 
 
 
